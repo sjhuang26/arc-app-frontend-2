@@ -1,0 +1,66 @@
+html {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#app {
+  flex: 1;
+  min-height: 0;
+}
+.top-ui-card {
+  border: 3px solid #ddd;
+  border-radius: 1rem;
+  background: #fafafa;
+}
+
+.app-sidebar {
+  border-right: 5px solid #ddd;
+}
+.app-content-panel {
+}
+/*
+
+This is a series of aliases for flexbox layout.
+
+
+What this layout system does:
+- designed to prevent issues with scrollbars popping up in the wrong places
+- uses flexbox for basically everything
+- children take up equal horizontal/vertical space unless Lf is used
+
+*/
+
+.layout-h {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+.layout-h > * {
+  flex: 1;
+  min-width: 0;
+}
+.layout-v {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.layout-v > * {
+  flex: 1;
+  min-height: 0;
+}
+.layout-item-fit {
+  flex: 0 1 auto;
+}
+.layout-item-scroll {
+  overflow: auto;
+}
+.layout-item-fixedscroll {
+  overflow: scroll;
+}
